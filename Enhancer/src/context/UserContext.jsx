@@ -13,7 +13,7 @@ const UserContext = ({children}) => {
     useEffect(() => {
       const token = localStorage.getItem('token')
       if(token && (!user || !user.email)){
-        axios.get('http://localhost:3000/user/profile', {
+        axios.get('https://mg-enhancer-backend.onrender.com', {
           headers:{
             'Authorization': `Bearer ${token}`
           }
