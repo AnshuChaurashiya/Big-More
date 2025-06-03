@@ -18,7 +18,7 @@ const LoginPage = () => {
     try {
       console.log('Attempting login with:', { email })
       
-      const response = await axios.post('http://localhost:3000/user/login', {
+      const response = await axios.post('https://mg-enhancer-backend.onrender.com', {
         email,
         password
       })
@@ -48,7 +48,7 @@ const LoginPage = () => {
         password
       }
       console.log('Attempting signup with:', { name, email })
-      const response = await axios.post('http://localhost:3000/user/register', newUser)
+      const response = await axios.post('https://mg-enhancer-backend.onrender.com', newUser)
 
       console.log('Signup response:', response.data)
       if(response.status === 201){
